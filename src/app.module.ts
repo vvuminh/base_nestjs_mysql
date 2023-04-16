@@ -8,6 +8,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConsoleModule } from 'nestjs-console';
 // import { MailerModule } from '@nestjs-modules/mailer';
 // import { PugAdapter } from '@nestjs-modules/mailer/dist/adapters/pug.adapter';
 // import { UsersModule } from './modules/users/users.module';
@@ -39,15 +40,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     // AdminModule,
     // LoggingModule,
     // Web3Module,
+    ConsoleModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      // .apply(AuthMiddleware)
-      // .forRoutes({ path: '/admin/*', method: RequestMethod.ALL });
+    consumer;
+    // .apply(AuthMiddleware)
+    // .forRoutes({ path: '/admin/*', method: RequestMethod.ALL });
     // consumer
     //   .apply(UserMiddleware)
     //   .forRoutes({ path: 'users', method: RequestMethod.PUT });

@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "get crypto currencies quote",
+      "script": "npm run console:dev list",
+      "log_date_format" : "YYYY-MM-DD HH:mm:ss",
+      "instances": 1
+    }
+  ]
+}
